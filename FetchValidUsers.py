@@ -16,7 +16,7 @@ def fetch_users(start, end) -> None:
             valid_contract = json.loads(valid_contract)
             for action in valid_contract["actions"]:
                 account_actions.append(action["name"])
-            valid_actions = subprocess.Popen(["cline", "get", "actions", account, start, end, "-j", "--full"], stdout = subprocess.PIPE).communicate()[0].decode()
+            valid_actions = subprocess.Popen(["cline", "get", "actions", account, str(start), str(end), "-j", "--full"], stdout = subprocess.PIPE).communicate()[0].decode()
             valid_actions = json.loads(valid_actions)["actions"]
             for act in valid_actions:
                 if act["action_trace"]["act"]["name"] in account_actions:
