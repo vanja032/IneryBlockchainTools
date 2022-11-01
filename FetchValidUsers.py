@@ -5,8 +5,8 @@ clear = False
 #Transactions from the start to the end for the account 
 def fetch_users(start, end) -> None:
     global clear
-    file = open("accounts.txt", "r")
-    accounts = file.read().split("\n")
+    file = open("accounts.json", "r")
+    accounts = json.load(file.read())
     #print(accounts)
     valid_accounts = []
     for account in accounts:
