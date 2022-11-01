@@ -1,1 +1,6 @@
-inery
+[
+    "inery",
+    "prod1",
+    "prod2",
+    "prod3"
+]
