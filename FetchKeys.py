@@ -3,7 +3,7 @@ import json
 
 def get_keys(account):
     public_key = json.loads(subprocess.Popen(["cline", "get", "account", account, "--json"], stdout = subprocess.PIPE).communicate()[0].decode())["permissions"][0]["required_auth"]["keys"][0]["key"]
-    keys = json.loads(subprocess.Popen(["cline", "wallet", "private_keys", "--password", "PW5KMczH1rHrLQby35BPpbRQWHoEhLtN4ScgyWYhjAaKcqzcxZv1k"], stdout = subprocess.PIPE).communicate()[0].decode())
+    keys = json.loads(subprocess.Popen(["cline", "wallet", "private_keys", "--password", "<wallet private key>"], stdout = subprocess.PIPE).communicate()[0].decode())
     for key_pair in keys:
         if key_pair[0] == public_key:
             print("Public key: " + key_pair[0] + "\n" + "Private key: " + key_pair[1])
