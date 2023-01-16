@@ -1,0 +1,8 @@
+[{
+	"NAME": "accountName", 
+	"PUBLIC_KEY": "publicKey", 
+	"PRIVATE_KEY": "privateKey", 
+	"PEER_ADDRESS": "IP:9010",
+	"HTTP_ADDRESS": "0.0.0.0:8888",
+	"HOST_ADDRESS": "0.0.0.0:9010"
+}]
