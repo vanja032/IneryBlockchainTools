@@ -1,5 +1,5 @@
 cline create wallet --file def.txt
-Key=PW5JLjYb3Pim4s8exJy1kTxgYs7kSUchj2YmjS4qYNmRgngVq5rHb
+Key=<wallet default unlock password>
 
 ./genesis_start.sh 
 
@@ -9,7 +9,7 @@ curl --request POST \
     --url http://127.0.0.1:8888/v1/producer/schedule_protocol_feature_activations \
     -d '{"protocol_features_to_activate": ["0ec7e080177b2c02b278d5088611686b49d739925a92d9bfcacd7fc6b74053bd"]}'
 
-cline set contract inery ./
+cline set contract inery ./inery/build/contracts/contracts/inery.boot
 
 ./activate_features.sh 
 
